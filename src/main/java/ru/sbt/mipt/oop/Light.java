@@ -10,14 +10,14 @@ public class Light {
     }
 
     public boolean isOn() {
-        return isOn;
+        return this.isOn;
     }
 
-    public String getId() {
-        return id;
+    public String getLightId() {
+        return this.id;
     }
 
     public void setOn(boolean on) {
-        isOn = on;
+        this.isOn = on;
     }
 }

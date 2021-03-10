@@ -13,6 +13,7 @@ import java.util.Arrays;
 public class HomeBuilder {
 
     public static void main(String[] args) throws IOException {
+
         Room kitchen = new Room(Arrays.asList(new Light("1", false), new Light("2", true)),
                 Arrays.asList(new Door(false, "1")),
                 "kitchen");
@@ -30,6 +31,7 @@ public class HomeBuilder {
         String jsonString = gson.toJson(smartHome);
         System.out.println(jsonString);
         Path path = Paths.get("output.js");
+
         try (BufferedWriter writer = Files.newBufferedWriter(path)) {
             writer.write(jsonString);
         }

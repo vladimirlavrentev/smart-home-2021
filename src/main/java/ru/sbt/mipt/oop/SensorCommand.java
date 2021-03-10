@@ -9,11 +9,10 @@ public class SensorCommand {
         this.objectId = objectId;
     }
 
-    @Override
-    public String toString() {
+    public String message() {
         return "SensorCommand{" +
-                "type=" + type +
-                ", objectId='" + objectId + '\'' +
+                "type=" + this.type +
+                ", objectId='" + this.objectId + '\'' +
                 '}';
     }
 }

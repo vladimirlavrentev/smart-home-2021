@@ -15,10 +15,10 @@ public class SmartHome {
     }
 
     public void addRoom(Room room) {
-        rooms.add(room);
+        this.rooms.add(room);
     }
 
     public Collection<Room> getRooms() {
-        return rooms;
+        return this.rooms;
     }
 }

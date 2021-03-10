@@ -10,18 +10,17 @@ public class SensorEvent {
     }
 
     public SensorEventType getType() {
-        return type;
+        return this.type;
     }
 
     public String getObjectId() {
-        return objectId;
+        return this.objectId;
     }
 
-    @Override
-    public String toString() {
+    public String message() {
         return "SensorEvent{" +
-                "type=" + type +
-                ", objectId='" + objectId + '\'' +
+                "type=" + this.type +
+                ", objectId='" + this.objectId + '\'' +
                 '}';
     }
 }

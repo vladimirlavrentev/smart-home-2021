@@ -9,11 +9,11 @@ public class Door {
         this.id = id;
     }
 
-    public String getId() {
-        return id;
+    public String getDoorId() {
+        return this.id;
     }
 
     public void setOpen(boolean open) {
-        isOpen = open;
+        this.isOpen = open;
     }
 }

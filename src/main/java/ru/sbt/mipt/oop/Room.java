@@ -14,14 +14,14 @@ public class Room {
     }
 
     public Collection<Light> getLights() {
-        return lights;
+        return this.lights;
     }
 
     public Collection<Door> getDoors() {
-        return doors;
+        return this.doors;
     }
 
-    public String getName() {
-        return name;
+    public String getRoomName() {
+        return this.name;
     }
 }
