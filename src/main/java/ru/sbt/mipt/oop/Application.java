@@ -36,6 +36,9 @@ public class Application {
                 }
             }
             if (event.getType() == DOOR_OPEN || event.getType() == DOOR_CLOSED) {
+                if (event.getType() == DOOR_OPEN && smartHome.getSignalizationState() == 1) {
+                    smartHome.alert();
+                }
                 // событие от двери
                 for (Room room : smartHome.getRooms()) {
                     for (Door door : room.getDoors()) {
@@ -61,6 +64,12 @@ public class Application {
                         }
                     }
                 }
+            }
+            if (event.getType() == SIGNALIZATION_TURN_ON) {
+                smartHome.turnOnSignalization();
+            }
+            if (event.getType() == SIGNALIZATION_TURN_OFF) {
+                smartHome.turnOffSignalization();
             }
             event = getNextSensorEvent();
         }
